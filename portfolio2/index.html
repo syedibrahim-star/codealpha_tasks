@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahim's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Ibrahim's Portfolio</div>
+    <div class="resume-section">
+      <label for="resumeUpload"><a href="resume.pdf" download>My Resume</a>
+</label>
+     
+  </nav>
+
+  <section class="intro-section">
+    <div class="intro-left">
+      Hi, I'm <span style="color: #f39c12;">Ibrahim</span>, a passionate web developer creating modern and responsive web applications.
+    </div>
+    <div class="intro-right">
+     
+      <img id="profileImage" src="webdev.img.png" alt="" width="23%" />
+    </div>
+  </section>
+
+  <section class="skills-section" data-animate>
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><img src="htmllogo.png" alt=""></div>
+      <div class="skill"><img src="csslogo.png" alt=""></div>
+      <div class="skill"><img src="jslogo.png" alt=""></div>
+      <div class="skill"><img src="reactlogo.png" alt=""></div>
+      <div class="skill"><img src="pythonlogo.png" alt=""></div>
+      <div class="skill"><img src="sqllogo.png" alt=""></div>
+      <div class="skill"><img src="htmllogo.png" alt=""></div>
+    </div>
+  </section>
+
+  <section class="certification-section" data-animate>
+    <h2>My Certifications</h2>
+    <div class="cert-grid">
+      <div class="certificate"><img src="cpp img certificate.jpg" alt="Certificate 1"></div>
+      <div class="certificate"><img src="cpp img certificate.jpg" alt="Certificate 2"></div>
+      <div class="certificate"><img src="cpp img certificate.jpg" alt="Certificate 3"></div>
+      <div class="certificate"><img src="cpp img certificate.jpg" alt="Certificate 4"></div>
+    </div>
+  </section>
+
+  <script>
+    function handleImageUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const url = URL.createObjectURL(file);
+        document.getElementById("profileImage").src = url;
+      }
+    }
+
+    const animateItems = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    animateItems.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

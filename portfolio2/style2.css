@@ -1,0 +1,93 @@
+@media (max-width: 850px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-left, .intro-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-left {
+    font-size: 1.4rem;
+    margin-top: 40px;
+  }
+
+  .intro-right img {
+    width: 80%;
+  }
+
+  .resume-section label {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-left {
+    font-size: 1.2rem;
+    margin-top: 30px;
+  }
+
+  .intro-right img {
+    width: 90%;
+  }
+
+  .resume-section label {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
